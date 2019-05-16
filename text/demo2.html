@@ -5,63 +5,39 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-        }
-        .box{
-            width: 100%;
-            height: 40px;
-            background-color: #3d8be3;
-        }
-        .con{
-            width: 1180px;
-            height: 100%;
-            margin: auto;
-        }
-        .left{
-            width: 690px;
-            height: 100%;
-            float:left;
-        }
-        .right{
-            width: 240px;
-            height: 100%;
-            float: right;
-        }
-        a{
-            float: left;
-            text-align: center;
-            line-height: 40px;
-            text-decoration: none;
-            color: white;
-        }
-        .left a{
-
-            width: 20%; height: 100%;
-
-        }
-        .right a{
-
-            width: 33.33333333%; height: 100%;
-        }
-        .active{
-            background: white;
-            color: #3d8be3;
-            border-top: 2px solid orange;
-        }
-        a:hover{
-            background: white;
-            color: #3d8be3;
-            border-top: 2px solid orange;
-        }
-        .inner{
-            background: url("text/img.png") no-repeat -315px -500px;
-        }
-    </style>
+    <title>民航售票</title>
+    <link rel="stylesheet" href="css/demo2.css">
+    <script>
+       window.onload= function () {
+           var banners = document.querySelectorAll(".banner");
+           var btns = document.querySelectorAll(".btn");
+           var num = 0;
+           setInterval(function () {
+               if (num == 2){
+                   num = 0
+               }else {
+                   for (var i = 0; i < banners.length; i++) {
+                       banners[i].style.display = "none";
+                       btns[i].style.backgroundColor = "#000"
+                   }
+                   banners[num].style.display = "block";
+                   btns[num].style.backgroundColor = "#ffa500";
+                   num++
+               }
+           },3000)
+       }
+    </script>
 </head>
 <body>
+<header>
+    <div class="login">
+    <img src="./img/login.png">
+    </div>
+    <div class="daohang">
+        <img src="./img/daohang.jpg" >
+    </div>
+
+</header>
 <div class="box">
     <div class="con">
         <div class="left">
@@ -75,9 +51,57 @@
             <a href="" class="inner">登录</a>
             <a href="">注册</a>
             <a href="">用户中心</a>
+            <div class="sanjiao"></div>
         </div>
     </div>
 </div>
 
+<div class="hot">
+    <span>热门城市：</span>
+    <a href="">深圳&nbsp;&nbsp;</a>
+    <a href="">北京&nbsp;&nbsp;</a>
+    <a href="">上海&nbsp;&nbsp;</a>
+    <a href="">广州&nbsp;&nbsp;</a>
+    <a href="">南京&nbsp;&nbsp;</a>
+    <a href="">天津&nbsp;&nbsp;</a>
+    <a href="">武汉&nbsp;&nbsp;</a>
+    <a href="">长沙&nbsp;&nbsp;</a>
+    <a href="">昆明&nbsp;&nbsp;</a>
+    <a href="">贵阳&nbsp;&nbsp;</a>
+    <a href="">成都&nbsp;&nbsp;</a>
+    <a href="">重庆&nbsp;&nbsp;</a>
+    <a href="">海口&nbsp;&nbsp;</a>
+    <a href="">哈尔滨&nbsp;&nbsp;</a>
+    <a href="">更多</a>
+</div>
+<div class="wheel-box">
+    <div class="banner banner1"></div>
+    <div class="banner banner2"></div>
+    <div class="btns">
+        <div class="btn" style="background-color: orange" ></div>
+        <div class="btn"></div>
+    </div>
+</div>
+<div class="box2">
+    <div class="reserve">
+        <div class="pop">
+            <span>热门航线预定</span>
+        </div>
+        <div class="city">
+            <ul>
+                <li><a href="">全国</a></li>
+                <li><a href="">深圳</a></li>
+                <li><a href="">北京</a></li>
+                <li><a href="">上海</a></li>
+                <li><a href="">广州</a></li>
+                <li><a href="">武汉</a></li>
+                <li><a href="">成都</a></li>
+                <li><a href="">汉口</a></li>
+                <li><a href="">重庆</a></li>
+                <li><a href="">沈阳</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
