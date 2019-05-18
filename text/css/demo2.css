@@ -1100,7 +1100,7 @@ header {
 .foott{
     width: 1366px;
     height: 280px;
-
+    color: #555555;
     margin:auto;
 }
 .foott_one{
@@ -1111,7 +1111,7 @@ header {
 
     margin:auto;
     font-size: 15px;
-    color: #444444;
+
 
 }
 .foott_two{
@@ -1143,6 +1143,6 @@ header {
 }
 .foott a{
     text-decoration: none;
-    color: black;
+    color: #555555;
 
 }
