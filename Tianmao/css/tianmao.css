@@ -1445,7 +1445,7 @@
     width: 100%;
     height: 750px;
     margin: auto;
-    border: 1px solid red;
+ /*   border: 1px solid red;*/
 }
 .tmall-ensure{
     width: 100%;
@@ -1514,4 +1514,13 @@ dd{
     margin-left: 50px;
     background: url("../imgs/erweima.png") no-repeat;
     background-size: 100%;
+}
+.end-buy{
+    float: left;
+    width: 1230px;
+    height: 300px;
+    margin: auto;
+    background: url("../imgs/jietu.png") no-repeat;
+    background-size: 100%;
+
 }
