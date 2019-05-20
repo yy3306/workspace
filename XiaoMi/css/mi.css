@@ -1,0 +1,10 @@
+.mi-site-topbar{
+    width: 1520px;
+    height: 40px;
+    color: #b0b0b0;
+   /* border: 1px solid red;*/
+    margin: auto;
+    position: relative;
+    font-size: 12px;
+    background: #333333;
+}
