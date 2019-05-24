@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>天猫tmall.com--理想生活上天猫</title>
     <link rel="stylesheet" href="css/tianmao.css">
+   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css">-->
     <script>
-        window.onload= function () {
+        window.onload = function(){a();b();}
+        function a() {
             var banners = document.querySelectorAll(".banner");
             var btns = document.querySelectorAll(".btn");
             var num = 0;
             setInterval(function () {
-                if (num == 5){
+                if (num==5){
                     num = 0
                 }else {
                     for (var i = 0; i < banners.length; i++) {
@@ -26,31 +28,37 @@
                 }
             },3000)
         }
-        window.onload= function () {
-            var banners = document.querySelectorAll(".floor-bottom");
-            var btns = document.querySelectorAll(".floor-current-tab");
+
+       function b() {
+            var floors = document.querySelectorAll(".floor-bottom");
+            var tabs = document.querySelectorAll(".floor-current-tab");
             var num = 0;
             setInterval(function () {
-                if (num == 2){
+                if (num == 2) {
                     num = 0
-                }else {
-                    for (var i = 0; i < banners.length; i++) {
-                        banners[i].style.display = "none";
-                        btns[i].style.backgroundColor = " #00b262"
+                } else {
+                    for (var i = 0; i < floors.length; i++) {
+                        floors[i].style.display = "none";
+                        tabs[i].style.backgroundColor = " #00b262"
                     }
-                    banners[num].style.display = "block";
-                    btns[num].style.backgroundColor = "#f5f5f5";
-                    btns[num].style.color = "black";
+                    floors[num].style.display = "block";
+                    tabs[num].style.backgroundColor = "#f5f5f5";
+                    tabs[num].style.color = "black";
                     num++
                 }
-            },2000)
+            }, 2000)
         }
+
     </script>
 </head>
 <body>
-<div class="header">
-    <div class="site-nav">
-        <div class="site-top">
+<script>
+
+</script>
+
+<div class=" header">
+    <div class=" site-nav">
+        <div class=" site-top">
             <div class="site-top-left">
                 <span>喵，欢迎来天猫</span>
                 <a href="">&nbsp;&nbsp;请登录</a>
@@ -87,8 +95,8 @@
             </div>
         </div>
     </div>
+   <!-- <div class="container">-->
     <div class="logo"></div>
-
     <div class="sousuo">
         <div class="sslan">
             <div class="s1">
@@ -131,6 +139,7 @@
             </div>
         </div>
     </div>
+<!--    </div>-->
     <!--商品菜单-->
     <div class="menu">
         <div class="menu-1">
@@ -144,50 +153,34 @@
         <div class="menu-5">
             <ul>
                 <li>
-                    <div class="menu-51">
                         <a href="">天猫会员</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">电器城</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">喵鲜生</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">医药馆</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">营业厅</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
-                        <a href="">魅力惠</a>
-                    </div>
+                    <a href="">魅力惠</a>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">飞猪旅行</a>
-                    </div>
                 </li>
                 <li>
-                    <div class="menu-51">
                         <a href="">苏宁易购</a>
-                    </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="lunbo-box">
+    <div class="container lunbo-box">
         <div class="banner banner1"></div>
         <div class="banner banner2"></div>
         <div class="banner banner3"></div>
@@ -275,7 +268,7 @@
             </ul>
         </div>
     </div>
-    <div class="dianpu">
+    <div class=" dianpu">
         <div class="brand">
             <div class="brand-head">
                 <span class="cn">品牌闪购</span>
@@ -284,7 +277,7 @@
             </div>
             <div class="brand-body"></div>
         </div>
-        <div class="brand2">
+        <div class=" brand2">
             <div class="brand-head2">
                 <span class="cn">聚名品</span>
                 <span class="en">LUXURY&nbsp;CHANNEL</span>
@@ -292,7 +285,7 @@
             </div>
             <div class="brand-body2"></div>
         </div>
-        <div class="brand3">
+        <div class=" brand3">
             <div class="brand-head3">
                 <span class="cn">品牌活动</span>
                 <span class="en">BRAND&nbsp;ACTIVITY</span>
@@ -302,9 +295,9 @@
         </div>
     </div>
     <!--图标-->
-    <div class="tubiao">
+    <div class=" tubiao">
         <ul>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li1">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -316,7 +309,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="  tubiao-li">
                 <div class="tubiao-li2">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -328,7 +321,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li3">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -340,7 +333,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li4">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -352,7 +345,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li5">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -364,7 +357,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li6">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -376,7 +369,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li7">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -388,7 +381,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li8">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -400,7 +393,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li9">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -412,7 +405,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li10">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -424,7 +417,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li11">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -436,7 +429,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li12">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -448,7 +441,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li13">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -460,7 +453,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li14">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -472,7 +465,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li15">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -484,7 +477,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li16">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -496,7 +489,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li">
                 <div class="tubiao-li17">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -508,7 +501,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li" >
                 <div class="tubiao-li18">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -520,7 +513,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class=" tubiao-li" >
                 <div class="tubiao-li19">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -532,7 +525,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li20">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -544,7 +537,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li21">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -556,7 +549,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li22">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -568,7 +561,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li23">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -580,7 +573,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li24">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -592,7 +585,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li25">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -604,7 +597,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li26">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -616,7 +609,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li27">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -628,7 +621,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li28">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -640,7 +633,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li29">
                 </div>
                 <a href="" class="tubiao-coupon">
@@ -652,7 +645,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="tubiao-li">
                 <div class="tubiao-li30">
                     <div class="zhuan"></div>
                     <span>换一批</span>
@@ -668,48 +661,15 @@
             <div class="logo-img"></div>
         </div>
         <div class="foods-menu">
-            <ul>
-                <li>
-                    <div class="foods-a">
-                        <a href="">进口食品</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">食品饮料</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">粮油副食</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">美容洗护</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">家居家电</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">家庭清洁</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">母婴用品</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">生鲜水果</a>
-                    </div>
-                </li>
-            </ul>
+            <a href="" class="hot-word">进口食品</a>
+            <a href="" class="hot-word">食品饮料</a>
+            <a href="" class="hot-word">粮油副食</a>
+            <a href="" class="hot-word">美容洗护</a>
+            <a href="" class="hot-word">家居家电</a>
+            <a href="" class="hot-word">家庭清洁</a>
+            <a href="" class="hot-word">母婴用品</a>
+            <a href="" class="hot-word">生鲜水果</a>
+
         </div>
     </div>
     <div class="bottom">
@@ -818,51 +778,12 @@
         <div class="foods-logo">
             <div class="logo-img2"></div>
         </div>
-        <div class="foods-menu">
-            <ul>
-                 <li>
-                    <div class="foods-a">
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">口红</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">YSL</a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="foods-a">
-                        <a href="">面膜</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">防晒</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="foods-a">
-                        <a href="">迪奥</a>
-                    </div>
-                </li>
-
-            </ul>
+        <div class="hot-word-con">
+            <a href="" class="hot-word">口红</a>
+            <a href="" class="hot-word">YSL</a>
+            <a href="" class="hot-word">面膜</a>
+            <a href="" class="hot-word">防晒</a>
+            <a href="" class="hot-word">迪奥</a>
         </div>
     </div>
     <div class="bottom">
@@ -1156,181 +1077,335 @@
     </div>
 </div>
 <div class="like-info">
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x1"></div>
-        <div class="floor-item-title">
-            【限量套装每日10:8限量开抢】Huawei/
-        </div>
-        <div class="floor-price">￥5488.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x2"></div>
-        <div class="floor-item-title">
-            Gree/格力KFR-35GW/NhBaD3大
-        </div>
-        <div class="floor-price">￥2849</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x3"></div>
-        <div class="floor-item-title">
-            科沃斯扫地机器人地宝DJ35只能家用超薄
-        </div>
-        <div class="floor-price">￥1899.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x4"></div>
-        <div class="floor-item-title">
-           【5.25&nbsp;0点开抢】OLAY淡斑小白瓶
-        </div>
-        <div class="floor-price">￥359.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x5"></div>
-        <div class="floor-item-title">
-            资生堂新红腰子讲话傲娇新红妍精华露
-        </div>
-        <div class="floor-price">￥1180.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x6"></div>
-        <div class="floor-item-title">
-            阿迪达斯官方&nbsp;Adidas&nbsp;YEEZY&nbsp;BOOST&nbsp;350
-        </div>
-        <div class="floor-price">￥1899.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x7"></div>
-        <div class="floor-item-title">
-            Xiaomi/小米&nbsp;小米电视4A&nbsp;65英寸4k超清
-        </div>
-        <div class="floor-price">￥2999.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x8"></div>
-        <div class="floor-item-title">
-            全棉时代&nbsp;婴儿棉柔巾纯棉新生儿干湿两用
-        </div>
-        <div class="floor-price">￥243.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x9"></div>
-        <div class="floor-item-title">
-            亿健精灵ELF跑步机家用款电动走步超静音
-        </div>
-        <div class="floor-price">￥1690.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-x10"></div>
-        <div class="floor-item-title">
-            【520礼物】雅诗兰黛小棕瓶抗蓝光眼霜
-        </div>
-        <div class="floor-price">￥510.0</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
-    <div class="floor-content-warp">
-        <div class="floor-content-img-h31"></div>
-        <div class="floor-item-title">
-            adidas阿迪达斯2019年新款男子EEZAY
-        </div>
-        <div class="floor-price">￥131</div>
-    </div>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic1"></span>
+                <span class="item-info">
+                <span class="item-desc">【限量套装每日10:8限量开抢】Huawei/</span>
+                <span class="item-detail">￥5488.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic2"></span>
+                <span class="item-info">
+                <span class="item-desc"> Gree/格力KFR-35GW/NhBaD3大</span>
+                <span class="item-detail">￥2849.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic3"></span>
+                <span class="item-info">
+                <span class="item-desc"> 科沃斯扫地机器人地宝DJ35只能家用超薄</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic4"></span>
+                <span class="item-info">
+                <span class="item-desc">【5.25&nbsp;0点开抢】OLAY淡斑小白瓶</span>
+                <span class="item-detail">￥359.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic5"></span>
+                <span class="item-info">
+                <span class="item-desc">【 资生堂新红腰子讲话傲娇新红妍精华露</span>
+                <span class="item-detail">￥1180.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic6"></span>
+                <span class="item-info">
+                <span class="item-desc">阿迪达斯官方&nbsp;Adidas&nbsp;YEEZY&nbsp;BOOST&nbsp;350</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic7"></span>
+                <span class="item-info">
+                <span class="item-desc">Xiaomi/小米&nbsp;小米电视4A&nbsp;65英寸4k超清</span>
+                <span class="item-detail">￥2999.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic8"></span>
+                <span class="item-info">
+                <span class="item-desc"> 全棉时代&nbsp;婴儿棉柔巾纯棉新生儿干湿两用</span>
+                <span class="item-detail">￥243.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+        <a href="" class="card-item">
+            <span class="item-pic9"></span>
+            <span class="item-info">
+                <span class="item-desc"> 亿健精灵ELF跑步机家用款电动走步超静音</span>
+                <span class="item-detail">￥1690.0</span>
+            </span>
+        </a>
+    </li>
+        <li class="wonderful-item">
+        <a href="" class="card-item">
+            <span class="item-pic10"></span>
+            <span class="item-info">
+                <span class="item-desc">【520礼物】雅诗兰黛小棕瓶抗蓝光眼霜</span>
+                <span class="item-detail">￥510.0</span>
+            </span>
+        </a>
+    </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic1"></span>
+                <span class="item-info">
+                <span class="item-desc">【限量套装每日10:8限量开抢】Huawei/</span>
+                <span class="item-detail">￥5488.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic2"></span>
+                <span class="item-info">
+                <span class="item-desc"> Gree/格力KFR-35GW/NhBaD3大</span>
+                <span class="item-detail">￥2849.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic3"></span>
+                <span class="item-info">
+                <span class="item-desc"> 科沃斯扫地机器人地宝DJ35只能家用超薄</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic4"></span>
+                <span class="item-info">
+                <span class="item-desc">【5.25&nbsp;0点开抢】OLAY淡斑小白瓶</span>
+                <span class="item-detail">￥359.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic5"></span>
+                <span class="item-info">
+                <span class="item-desc">【 资生堂新红腰子讲话傲娇新红妍精华露</span>
+                <span class="item-detail">￥1180.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic6"></span>
+                <span class="item-info">
+                <span class="item-desc">阿迪达斯官方&nbsp;Adidas&nbsp;YEEZY&nbsp;BOOST&nbsp;350</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic7"></span>
+                <span class="item-info">
+                <span class="item-desc">Xiaomi/小米&nbsp;小米电视4A&nbsp;65英寸4k超清</span>
+                <span class="item-detail">￥2999.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic8"></span>
+                <span class="item-info">
+                <span class="item-desc"> 全棉时代&nbsp;婴儿棉柔巾纯棉新生儿干湿两用</span>
+                <span class="item-detail">￥243.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic9"></span>
+                <span class="item-info">
+                <span class="item-desc"> 亿健精灵ELF跑步机家用款电动走步超静音</span>
+                <span class="item-detail">￥1690.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic10"></span>
+                <span class="item-info">
+                <span class="item-desc">【520礼物】雅诗兰黛小棕瓶抗蓝光眼霜</span>
+                <span class="item-detail">￥510.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic1"></span>
+                <span class="item-info">
+                <span class="item-desc">【限量套装每日10:8限量开抢】Huawei/</span>
+                <span class="item-detail">￥5488.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic2"></span>
+                <span class="item-info">
+                <span class="item-desc"> Gree/格力KFR-35GW/NhBaD3大</span>
+                <span class="item-detail">￥2849.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic3"></span>
+                <span class="item-info">
+                <span class="item-desc"> 科沃斯扫地机器人地宝DJ35只能家用超薄</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic4"></span>
+                <span class="item-info">
+                <span class="item-desc">【5.25&nbsp;0点开抢】OLAY淡斑小白瓶</span>
+                <span class="item-detail">￥359.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic5"></span>
+                <span class="item-info">
+                <span class="item-desc">【 资生堂新红腰子讲话傲娇新红妍精华露</span>
+                <span class="item-detail">￥1180.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic6"></span>
+                <span class="item-info">
+                <span class="item-desc">阿迪达斯官方&nbsp;Adidas&nbsp;YEEZY&nbsp;BOOST&nbsp;350</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic7"></span>
+                <span class="item-info">
+                <span class="item-desc">Xiaomi/小米&nbsp;小米电视4A&nbsp;65英寸4k超清</span>
+                <span class="item-detail">￥2999.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic8"></span>
+                <span class="item-info">
+                <span class="item-desc"> 全棉时代&nbsp;婴儿棉柔巾纯棉新生儿干湿两用</span>
+                <span class="item-detail">￥243.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic9"></span>
+                <span class="item-info">
+                <span class="item-desc"> 亿健精灵ELF跑步机家用款电动走步超静音</span>
+                <span class="item-detail">￥1690.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic10"></span>
+                <span class="item-info">
+                <span class="item-desc">【520礼物】雅诗兰黛小棕瓶抗蓝光眼霜</span>
+                <span class="item-detail">￥510.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="wonderful-line">
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic1"></span>
+                <span class="item-info">
+                <span class="item-desc">【限量套装每日10:8限量开抢】Huawei/</span>
+                <span class="item-detail">￥5488.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic2"></span>
+                <span class="item-info">
+                <span class="item-desc"> Gree/格力KFR-35GW/NhBaD3大</span>
+                <span class="item-detail">￥2849.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic3"></span>
+                <span class="item-info">
+                <span class="item-desc"> 科沃斯扫地机器人地宝DJ35只能家用超薄</span>
+                <span class="item-detail">￥1899.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic4"></span>
+                <span class="item-info">
+                <span class="item-desc">【5.25&nbsp;0点开抢】OLAY淡斑小白瓶</span>
+                <span class="item-detail">￥359.0</span>
+            </span>
+            </a>
+        </li>
+        <li class="wonderful-item">
+            <a href="" class="card-item">
+                <span class="item-pic5"></span>
+                <span class="item-info">
+                <span class="item-desc">【 资生堂新红腰子讲话傲娇新红妍精华露</span>
+                <span class="item-detail">￥1180.0</span>
+            </span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <div class="tm-end">
@@ -1506,11 +1581,56 @@
 
 
 <!--左边固定栏-->
-<!--<div class="nav-wrapper">
+<div class="nav-wrapper">
     <div class="nav-header">导航</div>
     <div class="fplift">
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+               天猫超市
+            </div>
+        </a>
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+                天猫国际
+            </div>
+        </a>
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+                美丽人生
+            </div>
+        </a> <a href="" class="mui-lift-nav">
+        <div class="mui-lift-nav-name">
+            潮店酷玩
+        </div>
+    </a> <a href="" class="mui-lift-nav">
+        <div class="mui-lift-nav-name">
+            居家生活
+        </div>
+    </a>
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+                打造爱巢
+            </div>
+        </a>
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+                户外出行
+            </div>
+        </a>
+        <a href="" class="mui-lift-nav">
+            <div class="mui-lift-nav-name">
+                猜你喜欢
+            </div>
+        </a>
+
+        <a href="" class="mui-lift-nav">
+
+            <div class="mui-lift-nav-img">
+                顶部
+            </div>
+        </a>
     </div>
-</div>-->
+</div>
 
 </body>
 </html>
