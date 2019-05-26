@@ -465,7 +465,7 @@ header {
 .reserve span {
     float: left;
     height: 40px;
-    width: 30%;
+    width: 20%;
     color: #555;
     font-size: 24px;
     text-align: left;
@@ -473,13 +473,24 @@ header {
 }
 
 .reserve a {
+     color: #555;
+     float: right;
+     width: 6%;
+     text-align: center;
+     text-decoration: none;
+     font-size: 20px;
+     height: 40px;
+     /*border: 1px solid red;*/
+ }
+.reserve .btn {
     color: #555;
     float: right;
     width: 6%;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    height: 40px;
+    height: 30px;
+    background-color: white;
     /*border: 1px solid red;*/
 }
 .reserve a:hover {
@@ -491,7 +502,15 @@ header {
     width: 1250px;
     height:310px;
     margin: auto;
-
+    position: relative;
+}
+.one{
+    position: absolute;
+    top: 0;
+    left:30px;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 .one li{
     width: 225px;
@@ -504,6 +523,28 @@ header {
 }
  .one .content{
      background: url("../img/carl.png") no-repeat ;
+    margin: 10px  auto;
+}
+
+.one-2{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    margin: auto;
+    padding: 0;
+    display: none;
+}
+.one-2 li{
+    width: 225px;
+    height: 140px;
+    text-align: center;
+    color: #0055AA;
+    margin: 10px 10px 0 0;
+    float: left;
+    list-style: none;
+}
+.one-2 .content{
+    background: url("../img/carl.png") no-repeat ;
     margin: 10px  auto;
 }
 .luxian{
@@ -917,15 +958,18 @@ header {
     color: #3b8de3;
 }
 .m3{
-
     float: left;
     width: 450px;
     height: 100%;
+    position: relative;
 }
 .m3 .one {
     width: 225px;
     height: 140px;
-    float: left;
+    /*float: left;*/
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
     color: #0055AA;
     margin: 15px 0 0 0;
@@ -940,7 +984,7 @@ header {
 .m3 .one .content .date{
     margin: 10px auto 20px;
 }
-.m3 .one .content .price{
+.m3 .one .conten .price{
     margin: 25px auto 15px;
     font-size: 14px;
 }
@@ -951,6 +995,40 @@ header {
     font-size: 14px;
 }
 .m3 .one .content .price .number{
+    font-size: 20px;
+}
+.m3 .two {
+    width: 225px;
+    height: 140px;
+    /*float: left;*/
+    position: absolute;
+    top: 0;
+    left: 230px;
+    text-align: center;
+    color: #0055AA;
+    margin: 15px 0 0 0;
+    background: url("../img/carl.png") no-repeat;
+}
+.m3 .two .content{
+    margin: auto;
+}
+.m3 .two .content .chufa{
+    margin: 10px auto;
+}
+.m3 .two .content .date{
+    margin: 10px auto 20px;
+}
+.m3 .two .conten .price{
+    margin: 25px auto 15px;
+    font-size: 14px;
+}
+.m3 .two .content .price span{
+    color: orange;
+}
+.m3 .two .content .price .money{
+    font-size: 14px;
+}
+.m3 .two .content .price .number{
     font-size: 20px;
 }
 /*支付安全*/
@@ -1110,17 +1188,17 @@ header {
 
 }
 .foott_two{
-    padding-left: 600px;
-    padding-top: 10px;
-    width: 1180px;
+   /* padding-left: 600px;
+    padding-top: 10px;*/
+
+    width: 60px;
     height: 80px;
     margin:auto;
-
 }
 .foott_three{
-    padding-left: 200px;
+   /* padding-left: 200px;*/
     padding-top: 10px;
-    width: 950px;
+    width: 600px;
     height: 27px;
     margin:auto;
 

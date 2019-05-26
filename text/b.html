@@ -7,38 +7,117 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        div{
-            /*color: rgb(255,0,0);
-            !**
-            默认大小16像素
-            加粗
-            排列方式
-            行高
-            指定字体
-             *!
-            font-size: 50px;
-            font-weight: bold;
-            text-align: left;
-            line-height: 100px;
-            font-family: "宋体";*/
-            width: 200px;height: 200px;
-           /* border-top-color: red;
-            border-top-style: dashed;
-            border-top-width: 5px;*/
-            border: red dashed 5px;
-            margin: 20px;
-            padding: 10px;
-            float: left;
+        *{
+            box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+        }
+        .container{
+            width:600px;
+            height:500px;
+        }
+        .six-top{
+            width:100%;
+            height:50px;
+
+        }
+        .six-top .six-top-item{
+            width:98px;
+            height:50px;
+            background-color:#d5d5d5;
+            text-align:center;
+            line-height:50px;
+            float:left;
+            margin-right:2px;
+            border:1px solid #d5d5d5;
+            cursor:pointer;
+        }
+        .six-top .six-top-item-spe{
+            margin-right:0px;
         }
 
+
+        .six-top .on{
+            background-color:#fff;
+        }
+        .six-cont{
+            width:100%;
+            height:450px;
+            border:1px solid #e8e8e8;
+            position:relative;
+        }
+        .cont{
+            width:598px;
+            height:450px;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .six-cont1{
+            background-color:red;
+            display:block;
+        }
+        .six-cont2{
+            background-color:orange;
+            display:none;
+        }
+        .six-cont3{
+            background-color:yellow;
+            display:none;
+        }
+        .six-cont4{
+            background-color:green;
+            display:none;
+        }
+        .six-cont5{
+            background-color:blue;
+            display:none;
+        }
+        .six-cont6{
+            background-color:pink;
+            display:none;
+        }
     </style>
+    <script>
+        $('.six-top').on('mouseover','.six-top-item', function() {
+            var currentIndex = $(this).index() +1;
+            hideAll();
+            hideAllTop();
+            $(this).css('background-color','#fff');
+            $('.six-cont'+currentIndex).show();
+        });
+
+
+        function hideAll() {
+            for (var i=1;i<7;i++) {
+                $('.six-cont'+i).hide();
+            }
+        }
+        function hideAllTop(){
+            for(var i=0;i<6;i++){
+                $('.six-top-item').eq(i).css('background-color','#d5d5d5');
+            }
+        }
+    </script>
 </head>
 <body>
-    <div>
-        我是div<br>
+<div class="container">
+    <div class="six-top ">
+        <div class="six-top-item on">标题1</div>
+        <div class="six-top-item">标题2</div>
+        <div class="six-top-item">标题3</div>
+        <div class="six-top-item">标题4</div>
+        <div class="six-top-item">标题5</div>
+        <div class="six-top-item six-top-item-spe">标题6</div>
     </div>
-<div>
-    我是第二行
+    <div class="six-cont">
+        <div class="cont six-cont1"></div>
+        <div class="cont six-cont2"></div>
+        <div class="cont six-cont3"></div>
+        <div class="cont six-cont4"></div>
+        <div class="cont six-cont5"></div>
+        <div class="cont six-cont6"></div>
+    </div>
 </div>
 </body>
 </html>

@@ -8,7 +8,8 @@
     <title>民航售票</title>
     <link rel="stylesheet" href="css/demo2.css">
     <script>
-       window.onload= function () {
+        window.onload= function (){a();b()}
+    function a(){
            var banners = document.querySelectorAll(".banner");
            var btns = document.querySelectorAll(".btn");
            var num = 0;
@@ -18,7 +19,7 @@
                }else {
                    for (var i = 0; i < banners.length; i++) {
                        banners[i].style.display = "none";
-                       btns[i].style.backgroundColor = "#000"
+                       btns[i].style.backgroundColor ="#000000"
                    }
                    banners[num].style.display = "block";
                    btns[num].style.backgroundColor = "#ffa500";
@@ -26,6 +27,21 @@
                }
            },3000)
        }
+    function  b(){
+        var borders = document.querySelectorAll(".border");
+        var btns = document.querySelectorAll(".btn-one");
+        for (var i=0; i<borders.length; i++){
+            borders[i].index=i;
+            borders[i].onclick=function (ev) {
+                for (var j=0;j<btns.length;j++){
+                    btns[j].style.display="none";
+                    borders[j].style.backgroundColor="#ffffff";
+                }
+                btns[this.index].style.display="block";
+                borders[this.index].style.backgroundColor="#b0b0b0";
+            }
+        }
+     }
     </script>
 </head>
 <body>
@@ -230,23 +246,97 @@
 <div class="linetwo"></div>
 <!--热门航线-->
 <div class="reserve">
-    <div class="borderStyle">
+    <div class="border-style">
         <span>热门航线预订</span>
 
-        <a href="javascrip:;">沈阳</a>
-        <a href="">重庆</a>
-        <a href="">海口</a>
-        <a href="">成都</a>
-        <a href="">武汉</a>
-        <a href="">广州</a>
-        <a href="">上海</a>
-        <a href="">北京</a>
-        <a href="">深圳</a>
-        <a href="">全国</a>
+        <a href="javascript:;" class="border" onclick>沈阳</a>
+        <a href="javascript:;" class="border" onclick >重庆</a>
+        <a href="javascript:;" class="border" onclick>海口</a>
+        <a href="javascript:;" class="border" onclick >成都</a>
+        <a href="javascript:;" class="border" onclick >武汉</a>
+        <a href="javascript:;"  class="border" onclick>广州</a>
+        <a href="javascript:;"  class="border" onclick>上海</a>
+        <a href="javascript:;"  class="border" onclick>北京</a>
+        <a href="javascript:;"  class="border" onclick>深圳</a>
+        <a href="javascript:;"  class="border" onclick >全国</a>
     </div>
 </div>
 <div class="piaojia">
-    <ul class="one">
+    <ul class="btn-one one-2">
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->哈尔滨</div>
+                <div class="date">6月10日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">840</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    深圳---->昆明
+                </div>
+                <div class="date">6月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">480</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->沈阳</div>
+                <div class="date">06月21日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">860</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->上海</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">490</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->武汉</div>
+                <div class="date">06月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">570</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->西宁</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">810</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->济南</div>
+                <div class="date">05月26日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">650</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->北京</div>
+                <div class="date">06月02日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">750</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->成都</div>
+                <div class="date">06月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">620</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->兰州</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">740</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one">
         <li>
             <div class="content">
                 <div class="luxian">海口----->郑州</div>
@@ -320,6 +410,599 @@
             </div>
         </li>
     </ul>
+    <ul class="btn-one one-2">
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->哈尔滨</div>
+                <div class="date">6月10日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">840</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    深圳---->昆明
+                </div>
+                <div class="date">6月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">480</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->沈阳</div>
+                <div class="date">06月21日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">860</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->上海</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">490</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->武汉</div>
+                <div class="date">06月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">570</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->西宁</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">810</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->济南</div>
+                <div class="date">05月26日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">650</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->北京</div>
+                <div class="date">06月02日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">750</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->成都</div>
+                <div class="date">06月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">620</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->兰州</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">740</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one">
+        <li>
+            <div class="content">
+                <div class="luxian">海口----->郑州</div>
+                <div class="date">12月16日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    海口---->长沙
+                </div>
+                <div class="date">10月15日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">110</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">武汉----->神农架</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">117</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">银川----->昆明</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">220</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">太原----->昆明</div>
+                <div class="date">11月11日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">250</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南昌----->赣州</div>
+                <div class="date">5月27日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">180</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南京----->上海浦东</div>
+                <div class="date">07月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">西安----->上海浦东</div>
+                <div class="date">01月25日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">200</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">合肥----->海口</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">279</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">天津----->三亚</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">399</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one-2">
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->哈尔滨</div>
+                <div class="date">6月10日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">840</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    深圳---->昆明
+                </div>
+                <div class="date">6月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">480</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->沈阳</div>
+                <div class="date">06月21日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">860</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->上海</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">490</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->武汉</div>
+                <div class="date">06月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">570</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->西宁</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">810</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->济南</div>
+                <div class="date">05月26日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">650</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->北京</div>
+                <div class="date">06月02日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">750</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->成都</div>
+                <div class="date">06月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">620</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->兰州</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">740</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one">
+        <li>
+            <div class="content">
+                <div class="luxian">海口----->郑州</div>
+                <div class="date">12月16日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    海口---->长沙
+                </div>
+                <div class="date">10月15日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">110</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">武汉----->神农架</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">117</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">银川----->昆明</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">220</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">太原----->昆明</div>
+                <div class="date">11月11日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">250</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南昌----->赣州</div>
+                <div class="date">5月27日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">180</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南京----->上海浦东</div>
+                <div class="date">07月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">西安----->上海浦东</div>
+                <div class="date">01月25日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">200</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">合肥----->海口</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">279</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">天津----->三亚</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">399</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one-2">
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->哈尔滨</div>
+                <div class="date">6月10日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">840</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    深圳---->昆明
+                </div>
+                <div class="date">6月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">480</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->沈阳</div>
+                <div class="date">06月21日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">860</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->上海</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">490</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->武汉</div>
+                <div class="date">06月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">570</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->西宁</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">810</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->济南</div>
+                <div class="date">05月26日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">650</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->北京</div>
+                <div class="date">06月02日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">750</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->成都</div>
+                <div class="date">06月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">620</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->兰州</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">740</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one">
+        <li>
+            <div class="content">
+                <div class="luxian">海口----->郑州</div>
+                <div class="date">12月16日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    海口---->长沙
+                </div>
+                <div class="date">10月15日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">110</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">武汉----->神农架</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">117</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">银川----->昆明</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">220</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">太原----->昆明</div>
+                <div class="date">11月11日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">250</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南昌----->赣州</div>
+                <div class="date">5月27日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">180</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南京----->上海浦东</div>
+                <div class="date">07月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">西安----->上海浦东</div>
+                <div class="date">01月25日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">200</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">合肥----->海口</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">279</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">天津----->三亚</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">399</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one-2">
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->哈尔滨</div>
+                <div class="date">6月10日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">840</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    深圳---->昆明
+                </div>
+                <div class="date">6月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">480</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->沈阳</div>
+                <div class="date">06月21日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">860</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->上海</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">490</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->武汉</div>
+                <div class="date">06月04日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">570</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->西宁</div>
+                <div class="date">06月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">810</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->济南</div>
+                <div class="date">05月26日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">650</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->北京</div>
+                <div class="date">06月02日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">750</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->成都</div>
+                <div class="date">06月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">620</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">深圳----->兰州</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">740</span> </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-one one">
+        <li>
+            <div class="content">
+                <div class="luxian">海口----->郑州</div>
+                <div class="date">12月16日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">
+                    海口---->长沙
+                </div>
+                <div class="date">10月15日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">110</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">武汉----->神农架</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">117</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">银川----->昆明</div>
+                <div class="date">05月18日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">220</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">太原----->昆明</div>
+                <div class="date">11月11日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">250</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南昌----->赣州</div>
+                <div class="date">5月27日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">180</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">南京----->上海浦东</div>
+                <div class="date">07月03日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">150</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">西安----->上海浦东</div>
+                <div class="date">01月25日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">200</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">合肥----->海口</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">279</span> </div>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="luxian">天津----->三亚</div>
+                <div class="date">05月28日</div>
+                <div class="price">票价：<span class="money">￥</span><span class="number">399</span> </div>
+            </div>
+        </li>
+    </ul>
+
 </div>
 <!-- 空白行-->
 <div class="linethree"></div>
@@ -543,7 +1226,7 @@
                 <div class="price">票价：<span class="money">￥</span><span class="number">1395</span></div>
             </div>
         </div>
-        <div class="one">
+        <div class="two">
             <div class="content">
                 <div class="chufa">北京-->洛杉矶</div>
                 <div class="date">12月16日</div>
@@ -720,9 +1403,6 @@
             <br>美国旅游|韩国旅游攻略|订机票最便宜的网站|北京旅行社|打折机票|酒店加盟代理|爱侣游网|杭州户外俱乐部|四喜居门票网|深圳国旅|澳洲自由行|汽车票预定|四川青年旅行社|百程旅行网|重庆青年旅行社|俄罗斯旅游|美国旅游|深圳旅游论坛|重庆中国青年旅行社|青岛崂山|长岛旅游|南宁旅行社|青驿</p>
     </div>
 </div>
-
-
-
 
 </body>
 </html>
